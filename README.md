@@ -20,7 +20,7 @@ ETL stands for Extract, Transform, Load, a process that is foundational in data 
 3. **Load**
     - Loading is the process of storing the transformed data into a target system including data warehouse, database and data lake.
 
-![Untitled Diagram.drawio.svg](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Untitled_Diagram.drawio.svg)
+![Untitled Diagram.drawio.svg](images/Airflowlab06.svg)
 
 ETL in MLOps
 
@@ -78,7 +78,7 @@ curl -LfO '[https://airflow.apache.org/docs/apache-airflow/2.10.3/docker-compose
 
 - Will create a yaml file automatically to your directory and get this output.
 
-![Screenshot 2024-11-14 at 2.11.36 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-14_at_2.11.36_AM.png)
+![image](images/image-01.png)
 
 or, can use this as docker-compose file.
 
@@ -251,7 +251,7 @@ Here we have used the weather data information for data extracting as real time 
 
 The output for the data that we used. (Using the https://api.open-meteo.com/v1/forecast?latitude=51.5074&longitude=-0.1278&current_weather=true)
 
-![Screenshot 2024-11-14 at 2.04.25 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-14_at_2.04.25_AM.png)
+![image](images/image-02.png)
 
 ### Step 04 : Create the docker image and initialize the docker with Apache Airflow.
 
@@ -261,7 +261,7 @@ docker-compose up airflow-init
 
 This will lead to Airflow initialisation with Docker.
 
-![Screenshot 2024-10-12 at 1.48.06 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-10-12_at_1.48.06_AM.png)
+![image](images/image-03.png)
 
 Here you can see we have created a default Airflow user with the role Admin.
 
@@ -271,7 +271,7 @@ Here you can see we have created a default Airflow user with the role Admin.
 docker-compose up -d
 ```
 
-![Screenshot 2024-11-14 at 2.18.08 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-14_at_2.18.08_AM.png)
+![image](images/image-04.png)
 
 Successfully created the docker containers.
 
@@ -281,13 +281,13 @@ docker ps
 
 This command line will show what containers are currently active.
 
-![Screenshot 2024-11-14 at 2.32.18 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-14_at_2.32.18_AM.png)
+![image](images/image-05.png)
 
 ```python
 docker-compose down 
 ```
 
-![Screenshot 2024-11-14 at 2.18.47 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-14_at_2.18.47_AM.png)
+![image](images/image-06.png)
 
 Successfully stopped docker containers.
 
@@ -297,24 +297,24 @@ Successfully stopped docker containers.
     
     ip addr show eth0
     
-    ![Screenshot 2024-11-20 at 8.48.41 PM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-20_at_8.48.41_PM.png)
+    ![image](images/image-07.png)
     
 
 - Go to the load balancer.
 
-![Screenshot 2024-11-20 at 8.47.51 PM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-20_at_8.47.51_PM.png)
+![image](images/image-08.png)
 
 - Create the load balancer and launch it.
     
     
-    ![Screenshot 2024-11-20 at 8.49.13 PM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-20_at_8.49.13_PM.png)
+    ![image](images/image-09.png)
     
 
 ### Step 07 : Login to Apache Airflow.
 
 Go to the Airflow dashboard and login with the default user that was created.
 
-![Screenshot 2024-10-13 at 10.46.43 PM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-10-13_at_10.46.43_PM.png)
+![image](images/image-10.png)
 
 username: admin
 
@@ -322,7 +322,7 @@ password: admin
 
 ### Step 08 : Finalising the creation of the dag.
 
-![Screenshot 2024-11-14 at 2.35.23 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-14_at_2.35.23_AM.png)
+![image](images/image-11.png)
 
 As you can see we have successfully created the dag!
 
@@ -330,7 +330,7 @@ As you can see we have successfully created the dag!
 
 Trigger the dag and see if it runs successfully.
 
-![Screenshot 2024-11-14 at 2.15.25 AM.png](Airflow%20for%20ETL%20and%20Data%20Lake%20Management%2013dd4718bce880e2b672dac3cac5ae97/Screenshot_2024-11-14_at_2.15.25_AM.png)
+![image](images/image-12.png)
 
 # Conclusion:
 
